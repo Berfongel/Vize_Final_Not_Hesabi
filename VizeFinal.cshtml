@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model VizeFinal
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Vize Notunuzu Giriniz : </td>
+                    <td>@Html.EditorFor(not1 => not1.VizeNot) </td>
+                </tr>
+
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Final Notunuzu Giriniz : </td>
+                    <td>@Html.EditorFor(not2 => not2.FinalNot)    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Ortalamayı Göster" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.Message</td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
